@@ -4,8 +4,8 @@ import java.util.UUID;
 
 public class Car extends Vehicle {
     private int numberOfSeats;
-    public Car(UUID id, double weight, String color, double price, boolean isRented, int numberOfSeats) {
-        super(id, weight, color, price, isRented);
+    public Car(UUID id, double weight, String color, double price, int numberOfSeats) {
+        super(id, weight, color, price);
         this.numberOfSeats = numberOfSeats;
     }
 

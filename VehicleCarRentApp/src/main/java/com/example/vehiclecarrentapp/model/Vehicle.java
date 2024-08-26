@@ -9,12 +9,11 @@ public abstract class Vehicle {
     private double price;
     private boolean isRented;
 
-    public Vehicle(UUID id, double weight, String color, double price, boolean isRented) {
+    public Vehicle(UUID id, double weight, String color, double price) {
         this.id = id;
         this.weight = weight;
         this.color = color;
         this.price = price;
-        this.isRented = isRented;
     }
 
     public UUID getId() {
@@ -35,22 +34,6 @@ public abstract class Vehicle {
 
     public boolean isRented() {
         return isRented;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public void setRented(boolean rented) {

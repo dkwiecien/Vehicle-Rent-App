@@ -4,8 +4,8 @@ import java.util.UUID;
 
 public class Bicycle extends Vehicle {
     private boolean helperWheels;
-    public Bicycle(UUID id, double weight, String color, double price, boolean isRented, boolean helperWheels) {
-        super(id, weight, color, price, isRented);
+    public Bicycle(UUID id, double weight, String color, double price, boolean helperWheels) {
+        super(id, weight, color, price);
         this.helperWheels = helperWheels;
     }
 

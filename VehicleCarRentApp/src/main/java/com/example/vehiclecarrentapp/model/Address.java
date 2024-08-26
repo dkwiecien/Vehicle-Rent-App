@@ -28,20 +28,4 @@ public class Address {
     public int getStreetNumber() {
         return streetNumber;
     }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setPostCode(int postCode) {
-        this.postCode = postCode;
-    }
-
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
-    }
-
-    public void setStreetNumber(int streetNumber) {
-        this.streetNumber = streetNumber;
-    }
 }

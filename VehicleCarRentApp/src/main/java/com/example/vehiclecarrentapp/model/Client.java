@@ -7,14 +7,13 @@ public class Client {
     private String firstName;
     private String lastName;
     private Address address;
-    private List<Rent> currentRents;
+    private ArrayList<Rent> currentRents = new ArrayList<>();
 
-    public Client(UUID personalId, String firstName, String lastName, Address address, List<Rent> currentRents) {
+    public Client(UUID personalId, String firstName, String lastName, Address address) {
         this.personalId = personalId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
-        this.currentRents = currentRents;
     }
 
     public void addRent(Rent rent) {
@@ -29,6 +28,10 @@ public class Client {
         return personalId;
     }
 
+    public List<Rent> getCurrentRents() {
+        return currentRents;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -39,29 +42,5 @@ public class Client {
 
     public Address getAddress() {
         return address;
-    }
-
-    public List<Rent> getCurrentRents() {
-        return currentRents;
-    }
-
-    public void setPersonalId(UUID personalId) {
-        this.personalId = personalId;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public void setCurrentRents(List<Rent> currentRents) {
-        this.currentRents = currentRents;
     }
 }
