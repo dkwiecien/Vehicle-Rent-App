@@ -9,16 +9,16 @@ import java.util.List;
 import java.util.UUID;
 
 public class RentManager {
-    private final int MAX_RENTS = 2;
-    private ArrayList<Rent> archiveRents = new ArrayList<>();
-    private ArrayList<Client> clients = new ArrayList<>();
-    private ArrayList<Rent> allRents = new ArrayList<>();
+    private final ArrayList<Rent> archiveRents = new ArrayList<>();
+    private final ArrayList<Client> clients = new ArrayList<>();
+    private final ArrayList<Rent> allRents = new ArrayList<>();
 
     public RentManager() {
 
     }
 
     public Rent addRent(Client client, Vehicle vehicle) {
+        int MAX_RENTS = 2;
         if (client.getCurrentRents().size() >= MAX_RENTS) throw new Error("Too many rents on your account");
         if (vehicle.isRented()) throw new Error("This vehicle is already rented");
 
@@ -61,5 +61,17 @@ public class RentManager {
         if (rentCount == 0) {
             System.out.println("No current rents available");
         }
+    }
+
+    public ArrayList<Rent> getAllRents() {
+        return allRents;
+    }
+
+    public ArrayList<Rent> getArchiveRents() {
+        return archiveRents;
+    }
+
+    public ArrayList<Client> getClients() {
+        return clients;
     }
 }
