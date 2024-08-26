@@ -17,6 +17,14 @@ public class Client {
         this.currentRents = currentRents;
     }
 
+    public void addRent(Rent rent) {
+        currentRents.add(rent);
+    }
+
+    public void deleteRent(Rent rent) {
+        currentRents.remove(rent);
+    }
+
     public UUID getPersonalId() {
         return personalId;
     }

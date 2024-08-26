@@ -8,9 +8,9 @@ public class Rent {
     private Client client;
     private Vehicle vehicle;
 
-    public Rent(UUID id, double price, Client client, Vehicle vehicle) {
+    public Rent(UUID id, Client client, Vehicle vehicle) {
         this.id = id;
-        this.price = price;
+        this.price = vehicle.getPrice();
         this.client = client;
         this.vehicle = vehicle;
     }
